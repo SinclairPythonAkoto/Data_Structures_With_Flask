@@ -38,5 +38,7 @@ class LinkedList:
 # linked list implementation
 ll = LinkedList()
 ll.insert_beginning("data")
+ll.insert_beginning("new data")
+ll.insert_beginning("food")
 
-ll.print_linkedlist()   # data1 -> None
+ll.print_linkedlist()   # something else -> new data -> data -> None

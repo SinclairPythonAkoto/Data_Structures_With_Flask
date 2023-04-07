@@ -29,16 +29,36 @@ class LinkedList:
         print(ll_string)
 
     def insert_beginning(self, data):
-        # add data passed in to new node, point to head node next
+        # check if head is empty
+        if self.head is None:
+            self.head = Node(data, None)
+            self.last_node = self.head
+
         new_node = Node(data, self.head)
-        # update head node to new node
         self.head = new_node
+    
+    def insert_at_end(self, data):
+        # if head is empty, instert into beginning
+        if self.head is None:
+            self.insert_beginning(data)
+
+        self.last_node.next_node = Node(data, None)
+        self.last_node = self.last_node.next_node
+
 
 
 # linked list implementation
 ll = LinkedList()
-ll.insert_beginning("data")
-ll.insert_beginning("new data")
-ll.insert_beginning("food")
+ll.insert_beginning("food1")
+ll.insert_beginning("food2")
+ll.insert_beginning("food3")
+ll.insert_beginning("food4")
+ll.insert_beginning("food5")
+ll.insert_beginning("drinks1")
+ll.insert_beginning("drinks2")
 
-ll.print_linkedlist()   # something else -> new data -> data -> None
+ll.insert_at_end("desert")
+ll.insert_at_end("end")
+
+ll.print_linkedlist()
+# drinks2 -> drinks1 -> food5 -> food4 -> food3 -> food2 -> food1 -> desert -> end -> None

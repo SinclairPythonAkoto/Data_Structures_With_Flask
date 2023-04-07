@@ -14,6 +14,18 @@ class LinkedList:
         self.head = None
         self.last_node = None
     
+    def to_list(self):
+        l = []
+        if self.head is None:
+            return l
+        
+        node = self.head
+        while node:
+            l.append(node.data)
+            node = node.next_node
+        return l
+    
+    
     def print_linkedlist(self):
         ll_string = ""
         node = self.head

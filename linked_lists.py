@@ -44,21 +44,3 @@ class LinkedList:
 
         self.last_node.next_node = Node(data, None)
         self.last_node = self.last_node.next_node
-
-
-
-# linked list implementation
-ll = LinkedList()
-ll.insert_beginning("food1")
-ll.insert_beginning("food2")
-ll.insert_beginning("food3")
-ll.insert_beginning("food4")
-ll.insert_beginning("food5")
-ll.insert_beginning("drinks1")
-ll.insert_beginning("drinks2")
-
-ll.insert_at_end("desert")
-ll.insert_at_end("end")
-
-ll.print_linkedlist()
-# drinks2 -> drinks1 -> food5 -> food4 -> food3 -> food2 -> food1 -> desert -> end -> None

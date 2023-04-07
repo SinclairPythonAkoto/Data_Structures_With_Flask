@@ -28,16 +28,15 @@ class LinkedList:
         ll_string += " None"
         print(ll_string)
 
+    def insert_beginning(self, data):
+        # add data passed in to new node, point to head node next
+        new_node = Node(data, self.head)
+        # update head node to new node
+        self.head = new_node
+
 
 # linked list implementation
 ll = LinkedList()
+ll.insert_beginning("data")
 
-node4 = Node("data4", None)
-node3 = Node("data3", node4)
-node2 = Node("data2", node3)
-node1 = Node("data1", node2)
-
-# initialise head for linked list
-ll.head = node1
-
-ll.print_linkedlist()   # data1 -> data2 -> data3 -> data4 -> None
+ll.print_linkedlist()   # data1 -> None

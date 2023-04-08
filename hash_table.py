@@ -84,12 +84,12 @@ class HashTable:
 
 
 # implementation
-ht = HashTable(4)
-ht.add_key_value("hi", "there")
-ht.add_key_value("hi", "there")
-ht.add_key_value("hi", "there")
-ht.add_key_value("python", "akoto")
-ht.print_table()
+# ht = HashTable(4)
+# ht.add_key_value("hi", "there")
+# ht.add_key_value("hi", "there")
+# ht.add_key_value("hi", "there")
+# ht.add_key_value("python", "akoto")
+# ht.print_table()
 
 # {
 #     [0] python : akoto

@@ -16,7 +16,7 @@ class Queue:
             return
         
         # add to back of queue, add to next node
-        self.tail.next_node = None(data, None)
+        self.tail.next_node = Node(data, None)
         # make the tail the next node
         self.tail = self.tail.next_node
         return
